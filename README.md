@@ -14,12 +14,12 @@ A comprehensive ASP.NET Core REST API for an e-commerce platform with user manag
 - [API Documentation](#api-documentation)
 - [Project Structure](#project-structure)
 - [Database Schema](#database-schema)
-- [Authentication](#authentication)
 - [API Endpoints](#api-endpoints)
 - [Error Handling](#error-handling)
 - [Security](#security)
-- [Contributing](#contributing)
-- [License](#license)
+- [Logging](#logging)
+- [Performance Optimization](#performance-optimization)
+- [Future Enhancements](#future-enhancements)
 
 ## Features
 
