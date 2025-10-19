@@ -143,6 +143,7 @@ namespace WebApi.Data
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.Id).HasColumnName("id").ValueGeneratedOnAdd();
                 entity.Property(e => e.Name).HasColumnName("name").IsRequired().HasMaxLength(100);
+                entity.Property(e => e.Description).HasColumnName("description").IsRequired().HasMaxLength(100);
             });
         }
 
@@ -243,6 +244,7 @@ namespace WebApi.Data
                 entity.Property(e => e.Id).HasColumnName("id").ValueGeneratedOnAdd();
                 entity.Property(e => e.Amount).HasColumnName("amount").IsRequired();
                 entity.Property(e => e.OrderId).HasColumnName("order_id").IsRequired();
+                entity.Property(e => e.PaymentId).HasColumnName("payment_id").IsRequired();
                 entity.Property(e => e.PaymentType).HasColumnName("payment_type").IsRequired().HasMaxLength(50);
                 entity.Property(e => e.Status).HasColumnName("status").IsRequired().HasMaxLength(50);
                 entity.HasOne(e => e.Order)
