@@ -30,6 +30,9 @@ builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IStripeReconciliationService, StripeReconciliationService>();
+builder.Services.AddHostedService<PaymentReconciliationBackgroundService>();
+
 builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();

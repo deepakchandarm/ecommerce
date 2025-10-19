@@ -199,6 +199,8 @@ namespace WebApi.Data
                 entity.Property(e => e.TotalAmount).HasColumnName("total_amount").IsRequired().HasColumnType("decimal(18,2)");
                 entity.Property(e => e.Date).HasColumnName("date").IsRequired();
                 entity.Property(e => e.OrderStatus).HasColumnName("order_status").IsRequired();
+                entity.Property(o => o.PaymentIntentId).HasColumnName("payment_intent_id").HasMaxLength(500);
+                entity.Property(o => o.PaymentStatus).HasColumnName("payment_status").HasMaxLength(50);
                 entity.HasOne(e => e.User)
                       .WithMany(u => u.Orders)
                       .HasForeignKey(e => e.UserId)
